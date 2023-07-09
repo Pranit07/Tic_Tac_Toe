@@ -1,6 +1,5 @@
 const Square = () => {
-  return (<div>Hello</div>
-  )
+  return <div>Hello</div>;
 };
 
 export default Square;
