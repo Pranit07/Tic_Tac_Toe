@@ -1,5 +1,10 @@
-const Square = () => {
-  return <div>Hello</div>;
+/* eslint-disable react/prop-types */
+const Square = ({ value }) => {
+  return (
+    <button type="button" className="square">
+      {value}
+    </button>
+  );
 };
 
 export default Square;

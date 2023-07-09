@@ -1,13 +1,8 @@
 import './App.css';
-import Square from './components/square';
+import Board from './components/Board';
 
 function App() {
-  return (
-    <div>
-      <h1>Title</h1>
-      <Square />
-    </div>
-  );
+  return <Board />;
 }
 
 export default App;
