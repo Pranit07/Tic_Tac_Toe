@@ -8,13 +8,25 @@ const StatusMessage = ({ isXnext, winner, squares }) => {
 
   const rendermsg = () => {
     if (winner) {
-      return <div>Winner is {winner}</div>;
+      return (
+        <div>
+          <h2>Winner is {winner}</h2>
+        </div>
+      );
     }
     if (!winner && nomovesleft) {
-      return <div>Game Draw</div>;
+      return (
+        <div>
+          <h2>Game Draw</h2>
+        </div>
+      );
     }
     if (!winner && !nomovesleft) {
-      return <div>Next Player is {nextplayer} </div>;
+      return (
+        <div>
+          <h2>Next Player is {nextplayer} </h2>
+        </div>
+      );
     }
 
     return null;
