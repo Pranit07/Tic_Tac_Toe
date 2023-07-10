@@ -34,6 +34,11 @@ function App() {
 
   return (
     <div className="app">
+      <h1>
+        Tic<span className="text-green">Tac</span>Toe{' '}
+        <span className="text-orange namefont">by Pranit Sharma</span>
+      </h1>
+
       <StatusMessage isXnext={isXnext} winner={winner} squares={squares} />
       <Board squares={squares} handlesquareclick={handlesquareclick} />
 
