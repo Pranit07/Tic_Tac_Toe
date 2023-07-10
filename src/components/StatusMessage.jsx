@@ -1,4 +1,6 @@
 /* eslint-disable react/prop-types */
+import React from 'react';
+
 const StatusMessage = ({ isXnext, winner, squares }) => {
   const nomovesleft = squares.every(value => {
     if (value !== null) return true;
@@ -9,29 +11,31 @@ const StatusMessage = ({ isXnext, winner, squares }) => {
   const rendermsg = () => {
     if (winner) {
       return (
-        <div>
-          <h2>Winner is {winner}</h2>
-        </div>
+        <React.Fragment>
+          Winner is{' '}
+          <span className={winner == 'X' ? 'text-green' : 'text-orange'}>
+            {winner}
+          </span>
+        </React.Fragment>
       );
     }
     if (!winner && nomovesleft) {
-      return (
-        <div>
-          <h2>Game Draw</h2>
-        </div>
-      );
+      return <React.Fragment>Game Draw</React.Fragment>;
     }
     if (!winner && !nomovesleft) {
       return (
-        <div>
-          <h2>Next Player is {nextplayer} </h2>
-        </div>
+        <React.Fragment>
+          Next Player is{' '}
+          <span className={isXnext ? 'text-green' : 'text-orange'}>
+            {nextplayer}
+          </span>
+        </React.Fragment>
       );
     }
 
     return null;
   };
-  return <div>{rendermsg()}</div>;
+  return <div className="status-message">{rendermsg()}</div>;
 };
 
 export default StatusMessage;

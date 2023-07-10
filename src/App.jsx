@@ -28,10 +28,20 @@ function App() {
     setisXnext(currentisXnext => !currentisXnext);
   };
 
+  const clicknewgame = () => {
+    window.location.reload(true);
+  };
+
   return (
     <div className="app">
       <StatusMessage isXnext={isXnext} winner={winner} squares={squares} />
       <Board squares={squares} handlesquareclick={handlesquareclick} />
+
+      <div>
+        <button type="button" className="btn-reset" onClick={clicknewgame}>
+          Start new game
+        </button>
+      </div>
     </div>
   );
 }
