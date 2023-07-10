@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 
-import { useState } from 'react';
 import Square from './square';
 
 const Board = ({ squares, handlesquareclick }) => {
